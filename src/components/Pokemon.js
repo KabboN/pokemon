@@ -1,29 +1,22 @@
 import React from "react";
 
-export function Pokemon({ pokemon }) {
+export function Pokemon({ pokemon }) { 
+    
     return (
         <div className="pokemon">
-            <div className="pokemon_name">
-                <p>{pokemon.name}</p>
+            <div className="pokemon_count">
+                <p>{pokemon.count}</p>
             </div> 
-            <div className="pokemon_mata">
-                <span>{pokemon.MaxHP}</span>
-                <span>{pokemon.maxCP}</span>
+            <div className="pokemon_N_P">
+                <span>{pokemon.next}</span>
+                <span>{pokemon.previous}</span>
+            </div> 
+            <div className="pokemon_status">
+                <p>{pokemon.status}</p>
             </div>     
             <div className="pokemon_image">
                 <img src={pokemon.image} alt={pokemon.name} />
-            </div>   
-            <div className="pokemon_attacks">
-                {pokemon &&
-                    pokemon.attacks && 
-                    pokemon.attacks.special 
-                    .slice(0, 3)
-                    .map(attack => (
-                        <span key={`${attack.name}-${attack.damage}`}>
-                            {attack.name}
-                        </span>
-                    ))}
-            </div>   
+            </div>    
 
          </div>   
     )

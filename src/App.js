@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   const client = new ApolloClient({
-    uri: 'https://graphql-pokemon.now.sh'
+    uri: 'https://graphql-pokeapi.graphcdn.app/'
   });
   return (
     <ApolloProvider client={client}>
